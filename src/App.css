@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #e9f2fa;
+  --accent-color: #f1c40f;
+  --text-color: #2c3e50;
+  --light-text: #7f8c8d;
+  --white: #ffffff;
+  --shadow-color: #dbe9f4;
+}
+
+
+/* Top header styling */
+.header-top {
+  background: #003366;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+.header-top .top-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+.header-top .top-actions {
+  margin-top: 0.3rem;
+}
+.top-link {
+  color: #fff;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+/* College title */
+.main-title {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+/* Navbar styling */
+.navbar-main {
+  background: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.8rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 0.3rem 0.6rem;
+  font-weight: 500;
+}
+.nav-link.active {
+  color: #003366;
+  border-bottom: 2px solid #003366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .header-top .top-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navbar-main {
+    flex-direction: column;
+    align-items: center;
+  }
+}

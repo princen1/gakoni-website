@@ -1,0 +1,55 @@
+/* Minimal Footer Styles */
+.footer {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 2rem 0 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 300px; /* Minimized width */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.social-section {
+  margin-bottom: 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-icons a {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #f1c40f;
+  color: #003366;
+  transform: translateY(-2px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #002244;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #e0e0e0;
+}

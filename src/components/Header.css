@@ -1,0 +1,117 @@
+.header-container {
+  position: relative;
+  color: #ffffff;
+  padding-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url('../assets/a.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: white; /* fills the circle behind transparent areas */
+  padding: 4px; /* optional space inside circle */
+}
+
+/* Container for the scrolling strip */
+.scrolling-text {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2); /* subtle transparent black */
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+/* Actual text sliding */
+.scrolling-text p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: slide-left 30s linear infinite;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Smooth scrolling animation */
+@keyframes slide-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Mask to fade edges */
+.scrolling-text::before,
+.scrolling-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 1;
+}
+
+.scrolling-text::before {
+  left: 0;
+  background: linear-gradient(to right, #003366, rgba(0, 51, 102, 0));
+}
+
+.scrolling-text::after {
+  right: 0;
+  background: linear-gradient(to left, #003366, rgba(0, 51, 102, 0));
+}
+
+.social-icons {
+  display:flex;
+  gap: 1rem;
+  font-size: 1.3rem;
+  margin-top: -6px;
+}
+
+/* Base style: remove inherited white */
+.social-icons a {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+/* Individual icon colors */
+.social-icons a.facebook {
+  color: #1877f2; /* Facebook blue */
+}
+
+.social-icons a.instagram {
+  color: #e1306c; /* Instagram pink-red */
+}
+
+.social-icons a.twitter {
+  color: #000000; /* X / Twitter black */
+}
+
+/* Hover effect */
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.main-title {
+  font-weight:bold;
+  
+}
