@@ -16,6 +16,9 @@ import automobileImg from '../assets/auto.jpg';
 import sodImg from '../assets/c.jpg';
 import megImg from '../assets/a.jpg';
 
+// Letter to Parents PDF
+import LetterToParentsPDF from '../assets/Letter-to-Parents.pdf';
+
 const Home = () => {
   const sectionRefs = useRef([]);
 
@@ -47,6 +50,28 @@ const Home = () => {
   const addToRefs = (el) => {
     if (el && !sectionRefs.current.includes(el)) {
       sectionRefs.current.push(el);
+    }
+  };
+
+  const handleDownload = () => {
+    try {
+      // Create a temporary anchor element
+      const link = document.createElement('a');
+      link.href = LetterToParentsPDF;
+      link.download = 'Letter-to-Parents.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Fallback if download doesn't initiate
+      setTimeout(() => {
+        if (!document.body.contains(link)) {
+          window.open(LetterToParentsPDF, '_blank');
+        }
+      }, 2000);
+    } catch (error) {
+      console.error('Download error:', error);
+      alert('Failed to download the letter. Please try again later.');
     }
   };
 
@@ -150,11 +175,28 @@ const Home = () => {
           <li>
               Mid-Term Exams begin on July 8th. Students are advised to prepare early, stay focused, and give their best. Wishing everyone success!</li>
           <li>
-              We’re thrilled to open our new science lab, built to support student learning through practical experiments and innovation.</li>
+              We're thrilled to open our new science lab, built to support student learning through practical experiments and innovation.</li>
           <li>
-              designed to enhance hands-on learning and experimentation for our students.New textbook sets available for S1–S3.</li>
+              New textbook sets available for S1–S3, designed to enhance hands-on learning and experimentation for our students.</li>
         </ul>
         <Link to="/announcements" className="section-link">View All Announcements →</Link>
+      </section>
+
+      {/* Letter to Parents Section */}
+      <section className="section letter" ref={addToRefs}>
+        <h2>Babyeyi</h2>
+        <p>Download our latest communication for parents regarding school updates, events, and important information.</p>
+        <div className="download-container">
+          <button 
+            className="section-link download-link"
+            onClick={handleDownload}
+          >
+            Download Latest Letter
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="download-icon">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+          </button>
+        </div>
       </section>
 
       {/* Gallery Preview */}

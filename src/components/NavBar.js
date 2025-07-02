@@ -7,6 +7,7 @@ const navItems = [
   { to: '/about', label: 'About Us' },
   { to: '/courses', label: 'Courses' },
   { to: '/announcements', label: 'Announcements' },
+  { to: '/Letter', label: 'PL (Babyeyi)' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/contact', label: 'Contact Us' },
 ];
