@@ -10,28 +10,19 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
-    // Scroll reveal animation
     const handleScroll = () => {
-      const elements = document.querySelectorAll('.contact-header, .contact-content');
+      const container = document.querySelector('.contact-container');
+      const containerPosition = container.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
+      const elementVisible = 150;
       
-      elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const elementVisible = 150; // pixels to show before triggering
-        
-        if (elementPosition < windowHeight - elementVisible) {
-          element.classList.add('reveal');
-        }
-      });
+      if (containerPosition < windowHeight - elementVisible) {
+        container.classList.add('reveal');
+      }
     };
 
-    // Initial check in case elements are already visible
     handleScroll();
-    
-    // Add event listener
     window.addEventListener('scroll', handleScroll);
-    
-    // Clean up
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
