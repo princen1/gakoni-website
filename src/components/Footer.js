@@ -24,7 +24,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Gakoni Adventist College&nbsp;&nbsp; | &nbsp;&nbsp;Powered by Ngabo Prince Technologies</p>
+        <p>&copy; {new Date().getFullYear()} Gakoni Adventist College&nbsp;&nbsp; | &nbsp;&nbsp;Powered by Ngabo.P Technologies</p>
       </div>
     </footer>
   );

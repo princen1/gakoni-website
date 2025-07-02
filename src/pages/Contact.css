@@ -32,10 +32,6 @@
   line-height: 1.5;
 }
 
-.contact-content {
-  /* No separate animation - will move with container */
-}
-
 .contact-form {
   background: #ffffff;
   padding: 1.8rem;
@@ -45,6 +41,7 @@
 
 .form-group {
   margin-bottom: 1.2rem;
+  margin-right: 1.6rem;
 }
 
 .form-group input,
