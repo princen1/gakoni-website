@@ -83,7 +83,7 @@ const Courses = () => {
       <div className="courses-content-wrapper">
         <h2 className="courses-section-title scroll-reveal">All Available Courses</h2>
         <p className="courses-intro-text scroll-reveal" style={{ transitionDelay: '0.1s' }}>
-          Gakoni Adventist College offers six distinct programs to meet various academic and career aspirations.
+          Gakoni Adventist College offers five distinct programs to meet various academic and career aspirations.
         </p>
         
         <div className="courses-list-grid">

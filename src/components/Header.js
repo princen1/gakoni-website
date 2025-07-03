@@ -23,7 +23,7 @@ const Header = () => {
           </a>
         </div>
       </div>
-      <h1 className="main-title">Gakoni Adventist College</h1>
+      <h1 className="main-title">GAKONI ADVENTIST COLLEGE</h1>
     </header>
   );
 };
